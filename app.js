@@ -8,9 +8,14 @@ app.use(express.urlencoded({extended: true}));
 // ---- EXERCÍCIO 1 ----
 // GET /meunome → retorna seu nome completo
 app.get("/meunome", (req, res) => {
-    res.send("Meu nome é Maria Antonia Santos Moraes");
+    res.send("Meu nome é Maria Antônia Santos Moraes");
 });
 
+// ---- EXERCÍCIO 2 ----
+// GET /tico → retorna "teco"
+app.get("/tico", (req, res) => {
+    res.send("teco");
+});
 // ----------------------
 
 app.get("/", (req, res) => res.type('html').send(html));
