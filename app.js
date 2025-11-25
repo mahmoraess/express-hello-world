@@ -35,6 +35,18 @@ app.get("/pokemons", (req, res) => {
 
     res.json(pokemonsAsh);
 });
+
+// ---- EXERCÍCIO 4 ----
+// POST /series → retorna JSON com 3 séries favoritas
+app.post("/series", (req, res) => {
+    const seriesFavoritas = [
+        "Stranger Things",
+        "La Casa de Papel",
+        "Breaking Bad"
+    ];
+
+    res.json(seriesFavoritas);
+});
 // ----------------------
 
 app.get("/", (req, res) => res.type('html').send(html));
