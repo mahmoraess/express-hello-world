@@ -5,6 +5,14 @@ const port = process.env.PORT || 3001;
 app.use(express.json())
 app.use(express.urlencoded({extended: true}));
 
+// ---- EXERCÍCIO 1 ----
+// GET /meunome → retorna seu nome completo
+app.get("/meunome", (req, res) => {
+    res.send("Meu nome é Maria Antonia Santos Moraes");
+});
+
+// ----------------------
+
 app.get("/", (req, res) => res.type('html').send(html));
 
 app.get('/req', (req, res) => {
@@ -13,7 +21,6 @@ app.get('/req', (req, res) => {
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-
 
 const html = `
 <!DOCTYPE html>
@@ -65,4 +72,3 @@ const html = `
   </body>
 </html>
 `
-
