@@ -16,6 +16,25 @@ app.get("/meunome", (req, res) => {
 app.get("/tico", (req, res) => {
     res.send("teco");
 });
+
+// ---- EXERCÍCIO 3 ----
+// GET /pokemons → retorna lista JSON com os 10 primeiros pokemons do Ash
+app.get("/pokemons", (req, res) => {
+    const pokemonsAsh = [
+        "Pikachu",
+        "Caterpie",
+        "Pidgeotto",
+        "Bulbasaur",
+        "Charmander",
+        "Squirtle",
+        "Krabby",
+        "Muk",
+        "Kingler",
+        "Primeape"
+    ];
+
+    res.json(pokemonsAsh);
+});
 // ----------------------
 
 app.get("/", (req, res) => res.type('html').send(html));
